@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>表单元素的属性操作</title>
+</head>
+<body>
+<button>按钮</button>
+<input type="text" value="输入内容">
+<script>
+    //1.获取元素
+    let btn = document.querySelector('button')
+    let input = document.querySelector('input')
+    //2.注册事件 处理程序
+    btn.onclick = function(){
+        input.value = '贝斯特';
+       this.disabled = true;
+    }
+    val = input.value
+    input.onblur = function(){
+        input.value = val;
+    }
+    input.onfocus = function(){
+        input.value = '';
+    }
+</script>
+</body>
+</html>

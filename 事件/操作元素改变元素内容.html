@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作元素改变元素内容</title>
+</head>
+<body>
+<button>显示当前系统时间</button>
+<div>某个事件</div>
+<p>123</p>
+<script>
+    //当我们点击了按钮，div里面的文字会发生变化
+    //1.获取元素
+    let btn = document.querySelector('button')
+    let div = document.querySelector('div')
+    //2.注册事件
+    btn.onclick = function(){
+
+        div.innerText = getDate();
+    }
+    function getDate(){
+        let date = new Date();
+        let full = date.getFullYear();
+        let day = date.getDay();
+        let mon = date.getMonth()+1;
+        let time = date.toLocaleTimeString();
+        let arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        return full+'年'+ mon + '月' + day + '日' + arr[day] + time;
+    }
+    //我们元素可以不用添加事件
+    var p = document.querySelector('p')
+    p.innerText = getDate();
+
+</script>
+</body>
+</html>

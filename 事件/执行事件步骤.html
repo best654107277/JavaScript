@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>执行事件步骤</title>
+</head>
+<body>
+<div>123</div>
+<script>
+    //执行事件步骤
+    //点击div 控制台输出 我被选中了
+    //1.获取事件源
+    var div = document.querySelector("div")
+    //2.绑定事件 注册事件
+    // div.onclick
+    //3.添加事件处理程序
+    div.onclick = ()=>{
+        console.log('我被选中了');
+    }
+    document.onclick = ev=>{
+        console.log(ev.clientX +","+ ev.clientY)
+    }
+
+    // let sum = function (a,b){
+    //     return a+b;
+    // }
+
+    let sum = (a,b)=>a+b;
+    console.log(sum(1,2));
+</script>
+</body>
+</html>

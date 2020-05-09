@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除元素</title>
+</head>
+<body>
+<script>
+    // 先创建一个元素
+    let ul = document.createElement('ul')
+    let ulText = document.createTextNode('这是一个Ul');
+    ul.appendChild(ulText);
+    document.body.appendChild(ul);
+
+    // 删除上面创建的ul
+   // 选中ul元素
+ let remUl = document.querySelector('ul');
+ // 删除
+document.body.removeChild(remUl)
+</script>
+</body>
+</html>

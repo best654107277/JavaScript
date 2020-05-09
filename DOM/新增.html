@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增</title>
+</head>
+<body>
+<script>
+    // 创建h2元素
+    let h2 = document.createElement('h2');
+    //创建文本内容
+    let h2Text = document.createTextNode('OS 列表');
+
+    // 将文本内容插入到创建的元素内
+    h2.appendChild(h2Text);
+    console.log(h2);
+    //将H2渲染到页面
+    document.body.appendChild(h2);
+
+    // 创建ul元素
+    let ul = document.createElement('ul')
+    // 将ul渲染到页面
+    document.body.appendChild(ul);
+    // 循环创建li插入到ul内
+    let osList = ['mac','win','linux'];
+    // fragment :仓库的作用  创建fragment
+    let frag = document.createDocumentFragment();
+    for(let i = 0; i < osList.length; i++){
+        let li = document.createElement('li');
+        let liText = document.createTextNode(osList[i]);
+        li.appendChild(liText);
+        // ul.appendChild(li);
+        frag.appendChild(li);
+    }
+    //将存放在fragment仓库的li插入到UL内
+    ul.appendChild(frag);
+
+    //删除多个选中元素
+    // let liRem = document.querySelectorAll('li');
+    // for( let i = 0; i < liRem.length; i++){
+    //     liRem[i].parentNode.removeChild(liRem[i])
+    // }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
