@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+</head>
+<body>
+<script>
+     let arr  =[
+        ['a',1],
+        ['b',2],
+        ['c',3]
+         ]
+    let m = new Map( arr )
+    //  m.clear()//清空
+    //  m.delete('a')//删除某一项Key值
+     m.set('a',2).set('d',5)
+     /*
+     get( key ) // 获取某项具体值
+     参数：
+            key 数据的key值
+        返回值：
+            key 对应的value
+
+     has( key )//是否包含某一项
+        参数：
+                key 数据的key值
+            返回值:
+            true 或 false
+
+
+     set( key ) //设置一个值
+           参数：
+                key 数据的 key 值
+                val 数据的 value 值
+           返回值：
+                   map对象本身  可以链式操作
+       */
+     console.log(m);
+
+</script>
+</body>
+</html>

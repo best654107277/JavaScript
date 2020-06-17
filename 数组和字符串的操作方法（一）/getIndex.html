@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = 'kaikeba';
+    // getIndex(str,'i',0)
+    console.log(getIndex(str,'k',0))
+    /*
+    参数列表
+    -str : 要处理的字符串
+    -searchValue : 要查找的字符串
+    -fromIndex : 查找的起始位置
+    */
+    function getIndex(str,searchValue,fromIndex){
+        if(fromIndex < 0 || fromIndex === undefined){
+            fromIndex = 0;
+        }
+        if (fromIndex >= str.length){
+            return -1;
+        }
+        for(var i = fromIndex; i < str.length; i++){
+            if(str.charAt(i) === searchValue){
+                return i;
+                // console.log(i)
+            }
+
+        }
+        return -1;
+    }
+
+</script>
+</body>
+</html>
